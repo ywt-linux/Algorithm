@@ -12,7 +12,7 @@ public class QuickUnion {
     public QuickUnion(int n) {
         Seq = new int[n];
         Weight = new int [n];
-        for(int i = 0; i < n; i ++){
+        for(int i = 0; i < n; i ++) {
             Seq[i] = i;
             Weight[i] = 1;
         }
@@ -20,7 +20,7 @@ public class QuickUnion {
 
     //寻找根结点，寻找的时候缩短每棵树的高度
     private int root(int p) {
-        while(Seq[p] != p){
+        while(Seq[p] != p) {
             Seq[p] = Seq[Seq[p]];
             p = Seq[p];
         }
@@ -59,7 +59,7 @@ public class QuickUnion {
             int p = StdIn.readInt();
             int q = StdIn.readInt();
 
-            if(!myUnion.connected(p ,q)){
+            if(!myUnion.connected(p ,q)) {
                 myUnion.union(p, q);
             }
         }
